@@ -1,0 +1,57 @@
+body{
+    margin: 0;
+    padding: 0;
+    font-family: montserrat;
+    background: linear-gradient(120deg,#2980b9,#8e44ad);
+    height: 100vh;
+    overflow: hidden;
+}
+.center{
+    position: absolute;
+    top:50%;
+    left:50%;
+    transform: translate(-50%,-50%);
+    width: 600px;
+    background:white ;
+    border-radius: 16px;
+}
+.center h3{
+    font-family: montserrat;
+    color:black;
+    margin-left: 10px;
+    font-size: 30px;
+  
+}
+.btnback{
+    margin:20px;
+    padding-left: 30px;
+    padding-right: 30px;
+    border-radius: 16px;
+    border-style: dotted;
+    border-color: black;
+    background-color: white;
+    color: black;
+    font-size: 30px;
+
+}
+.btnback:hover{
+    background-color: black;
+    color: white;
+}
+.btnpassbook{
+   margin:20px;
+    float:right;
+    padding-left: 30px;
+    padding-right: 30px;
+    border-radius: 16px;
+    border-style: solid;
+    border-color: black;
+    background-color:white;
+    color: black;
+    font-size: 30px;
+}
+.btnpassbook:hover{
+
+    background-color: black;
+    color: cyan;
+}

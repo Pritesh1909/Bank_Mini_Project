@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" type="text/css" href="../css/style.css">
+</head>
+
+<body>
+<div class="center">
+    <h1>Sign Up</h1>
+    <form>
+        <div class="txt_field">
+            <input type="text" required id="username">
+            <span></span>
+            <label>username</label>
+
+        </div>
+        <div class="txt_field">
+            <input type="password" required id="password">
+            <span></span>
+            <label>password</label>
+        </div>
+        <div class="txt_field">
+            <input type="text" required id="empName">
+            <span></span>
+            <label>Employee Name</label>
+        </div>
+
+    </form>
+    <input type="submit" value="Sign-Up" id="login_button">
+</div>
+
+
+<script>
+    document.getElementById("login_button").addEventListener("click", sendData);
+
+    function sendData() {
+
+        const name = document.getElementById("username").value;
+        const pass = document.getElementById("password").value;
+        const empname = document.getElementById("empName").value;
+        const url = "http://localhost:8080/signup";
+        const xhr = new XMLHttpRequest();
+
+        xhr.open("POST", url, true);
+        xhr.setRequestHeader('Content-Type', 'application/json; charset=UTF-8');
+        xhr.onload = () => {
+            if (xhr.status === 200) {
+
+                console.log(xhr.response);
+            }
+            else {
+                console.log("error");
+            }
+        }
+        data = `{"userName":"${name}","password":"${pass}","empName":"${empname}"}`;
+        xhr.send(data);
+    };
+</script>
+</body>
+
+</html>
